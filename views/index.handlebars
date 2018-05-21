@@ -8,11 +8,6 @@
         <label for="burger">Burger Name:</label>
         <input type="text" id="burger" name="burger">
     </div>
-    {{!-- <div class="form-group">
-        <label for="devoured">Devoured Yet?</label><br>
-        <input type="radio" name="devoured" value="1" checked>Devoured!<br>
-        <input type="radio" name="devoured" value="0"> Eat Me! <br>
-    </div> --}}
     <button class="submit">Submit</button>
 </form>
 
@@ -29,7 +24,9 @@
 <ul id="right">
     {{#each burgers}}
     {{#if devoured}}
-    {{> burgers/burger-block devoured=false}}
+    <li>
+    {{this.burger_name}}
+    </li>
     {{/if}}
     {{/each}}
 </ul>
